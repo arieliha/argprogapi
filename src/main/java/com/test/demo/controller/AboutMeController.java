@@ -47,4 +47,26 @@ public class AboutMeController {
         // return "La persona fue eliminada correctamente";
         return ResponseEntity.noContent().build();
     }
+    
+    @CrossOrigin(origins = "http://localhost:4200")
+    @PutMapping ("/aboutme/editar/{id}")
+    public AboutMe editPersona (@PathVariable Long id,
+                                
+                                @RequestBody AboutMe RequestAboutMe
+                                // @RequestParam ("fullname") String nuevoNombre,
+                                // @RequestParam ("title") String nuevoTitle,
+                                // @RequestParam ("picfile") String nuevoPicfile,
+                                // @RequestParam ("description") String nuevaDescription
+    ) {
+    
+        AboutMe perso = interAboutMe.findAboutMe(id);
+        
+        perso.setFullname(RequestAboutMe.getFullname());
+        perso.setTitle(RequestAboutMe.getTitle());
+        perso.setPicfile(RequestAboutMe.getPicfile());
+        perso.setDescription(RequestAboutMe.getDescription());
+        
+        interAboutMe.saveAboutMe(perso);
+        return perso;
+    }
 }
