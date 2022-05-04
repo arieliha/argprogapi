@@ -65,6 +65,7 @@ public class AboutMeController {
         perso.setTitle(RequestAboutMe.getTitle());
         perso.setPicfile(RequestAboutMe.getPicfile());
         perso.setDescription(RequestAboutMe.getDescription());
+        perso.setOrder_about_me(RequestAboutMe.getOrder_about_me());
         
         interAboutMe.saveAboutMe(perso);
         return perso;
