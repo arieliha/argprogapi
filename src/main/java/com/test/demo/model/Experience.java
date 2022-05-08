@@ -18,12 +18,13 @@ import lombok.Setter;
  *
  * @author ariel
  */
-public class Persona {
+public class Experience {
     @Id
     @GeneratedValue(strategy=GenerationType.SEQUENCE)
     private Long id;
-    private String nombre;
-    private String apellido;
-    private int edad;
+    private String title;
+    private String period;
+    private String description;
+    private Long order_experience;
     
 }

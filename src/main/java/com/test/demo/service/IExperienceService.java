@@ -4,20 +4,20 @@
  */
 package com.test.demo.service;
 
-import com.test.demo.model.Persona;
+import com.test.demo.model.Experience;
 import java.util.List;
 
 /**
  *
  * @author ariel
  */
-public interface IPersonaService {
+public interface IExperienceService {
     
-    public List <Persona> getPersonas ();
+    public List <Experience> getExperiences ();
     
-    public void savePersona (Persona perso);
+    public Experience saveExperience (Experience perso);
     
-    public void deletePersona (Long id);
+    public void deleteExperience (Long id);
     
-    public Persona findPersona (Long id);
+    public Experience findExperience (Long id);
 }
