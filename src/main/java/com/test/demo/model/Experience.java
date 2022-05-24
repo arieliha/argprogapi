@@ -23,6 +23,7 @@ public class Experience {
     @GeneratedValue(strategy=GenerationType.SEQUENCE)
     private Long id;
     private String title;
+    private String company;
     private String period;
     private String description;
     private Long order_experience;

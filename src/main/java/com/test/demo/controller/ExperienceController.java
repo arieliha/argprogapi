@@ -65,6 +65,7 @@ public class ExperienceController {
         Experience perso = interExperience.findExperience(id);
         
         perso.setTitle(RequestExperience.getTitle());
+        perso.setCompany(RequestExperience.getCompany());
         perso.setPeriod(RequestExperience.getPeriod());
         perso.setDescription(RequestExperience.getDescription());
         perso.setOrder_experience(RequestExperience.getOrder_experience());
