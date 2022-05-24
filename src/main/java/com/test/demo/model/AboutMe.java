@@ -21,9 +21,7 @@ public class AboutMe {
     @GeneratedValue(strategy=GenerationType.SEQUENCE)
     private Long id;
     private Long order_about_me;
-    private String fullname;
     private String title;
-    private String picfile;
     private String description;
     
     }
