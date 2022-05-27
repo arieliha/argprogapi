@@ -29,14 +29,14 @@ public class ProjectController {
     @Autowired
     private IProjectService interProject;
     
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://argprog-4b6ba.web.app")
     @GetMapping ("/project/traer")
     
     public List<Project> getProjects() {
         return interProject.getProjects();
     }
     
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://argprog-4b6ba.web.app")
     //@PostMapping ("/experience/crear")
     @PostMapping ( value = "/project/crear", consumes = "application/json", produces="application/json")
 
@@ -46,7 +46,7 @@ public class ProjectController {
         // return "La experiencia fue creada correctamente";
     }
     
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://argprog-4b6ba.web.app")
     @DeleteMapping ("/project/borrar/{id}")
     public ResponseEntity<Object> deleteProject (@PathVariable Long id) {
     
@@ -55,7 +55,7 @@ public class ProjectController {
         
     }
     
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://argprog-4b6ba.web.app")
     @PutMapping ("/project/editar/{id}")
     public Project editProject (@PathVariable Long id,
             

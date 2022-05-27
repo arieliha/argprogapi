@@ -29,13 +29,13 @@ public class ExperienceController {
     @Autowired
     private IExperienceService interExperience;
     
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://argprog-4b6ba.web.app")
     @GetMapping ("/experience/traer")
     public List<Experience> getExperiences() {
         return interExperience.getExperiences();
     }
     
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://argprog-4b6ba.web.app")
     //@PostMapping ("/experience/crear")
     @PostMapping ( value = "/experience/crear", consumes = "application/json", produces="application/json")
 
@@ -45,7 +45,7 @@ public class ExperienceController {
         // return "La experiencia fue creada correctamente";
     }
     
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://argprog-4b6ba.web.app")
     @DeleteMapping ("/experience/borrar/{id}")
     public ResponseEntity<Object> deleteExperience (@PathVariable Long id) {
     
@@ -54,7 +54,7 @@ public class ExperienceController {
         
     }
     
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://argprog-4b6ba.web.app")
     @PutMapping ("/experience/editar/{id}")
     public Experience editExperience (@PathVariable Long id,
             

@@ -26,12 +26,12 @@ public class AboutMeController {
     
     @Autowired
     private IAboutMeService interAboutMe;
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://argprog-4b6ba.web.app")
     @GetMapping ("/aboutme/traer")
     public List<AboutMe> getPersonas() {
         return interAboutMe.getAboutMe();
     }
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://argprog-4b6ba.web.app")
     // @PostMapping ("/aboutme/crear")
     @PostMapping ( value = "/aboutme/crear", consumes = "application/json", produces="application/json")
     public AboutMe createStudent(@RequestBody AboutMe perso) {
@@ -39,7 +39,7 @@ public class AboutMeController {
         return interAboutMe.saveAboutMe(perso);
         //return "La persona fue creada correctamente";
     }
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://argprog-4b6ba.web.app")
     @DeleteMapping ("/aboutme/borrar/{id}")
     public ResponseEntity<Object> deletePersona (@PathVariable Long id) {
     
@@ -48,7 +48,7 @@ public class AboutMeController {
         return ResponseEntity.noContent().build();
     }
     
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://argprog-4b6ba.web.app")
     @PutMapping ("/aboutme/editar/{id}")
     public AboutMe editPersona (@PathVariable Long id,
                                 

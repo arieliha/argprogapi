@@ -26,13 +26,13 @@ public class EducationController {
     @Autowired
     private IEducationService interEducation;
     
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://argprog-4b6ba.web.app")
     @GetMapping ("/education/traer")
     
     public List<Education> getEducation() {
         return interEducation.getEducation();
     }
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://argprog-4b6ba.web.app")
     // @PostMapping ("/aboutme/crear")
     @PostMapping ( value = "/education/crear", consumes = "application/json", produces="application/json")
     public Education createEducation(@RequestBody Education educ) {
@@ -40,7 +40,7 @@ public class EducationController {
         return interEducation.saveEducation(educ);
         //return "La persona fue creada correctamente";
     }
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://argprog-4b6ba.web.app")
     @DeleteMapping ("/education/borrar/{id}")
     public ResponseEntity<Object> deleteEducation (@PathVariable Long id) {
     
@@ -49,7 +49,7 @@ public class EducationController {
         return ResponseEntity.noContent().build();
     }
     
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://argprog-4b6ba.web.app")
     @PutMapping ("/education/editar/{id}")
     public Education editEducation (@PathVariable Long id,
                                 
